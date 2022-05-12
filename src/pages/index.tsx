@@ -21,7 +21,7 @@ export default function Home() {
         <h1 className="font-bold text-3xl text-green-600">Bem vindo a Top Trampo</h1>
         <span className="w-sm">Estamos contruindo uma plataforma e comunidade focada para prestadores de serviços. <br /> Esse é um questionário para você ajudar a construir o melhor produto.</span>
       </div>
-      <form name='contact' method="POST" data-netlify="true" onSubmit="submit">
+      <form name="contact" method="POST" data-netlify="true">
         <div>
           <input type="hidden" name='contact' value='contact' />
           <div className="md:grid md:grid-cols-3 md:gap-6">
