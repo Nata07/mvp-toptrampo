@@ -1,8 +1,14 @@
 import { encode } from "punycode";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [data, setData] = useState(null)
+  const [success, setSuccess] = useState(false);
+  useEffect(() => {
+    console.log('chegou aqui')
+    if ( window.location.search.includes('success=true') ) {
+      setSuccess(true);
+    }
+  }, []);
   async function onSubmit(e) {
     fetch("/", {
       method: "POST",
@@ -16,7 +22,7 @@ export default function Home() {
   }
   return (
     <>
-      <form name="questionary" method="POST" data-netlify="true" onSubmit={(e) => onSubmit(e)}>
+      <form action="/?success=true" name="questionary" method="POST" data-netlify="true" onSubmit={(e) => onSubmit(e)}>
         <input type="hidden" name="form-name" value="questionary" />
         <div className="text-center mt-8">
           <h1 className="font-bold text-3xl text-green-600">Bem vindo a Top Trampo</h1>
@@ -37,11 +43,17 @@ export default function Home() {
                   <span className="block">Essas informações serão usadas na plataforma para fornece 
                     a melhor experiência para você e para seus clientes. 
                     <span className="block">Atente-se aos dados de email e telefone, é atraves desses dados que iremos entrar em contato contigo.</span>
-                  </span>.
+                  </span>
                 </p>
               </div>
             </div>
             <div className="mt-5 md:mt-0 md:col-span-2">
+            {success && (
+            <h2 className="block text-sm font-bold text-green-600  px-4">
+              Dados enviado com sucesso! Entraremos assim que possível para mais detalhes.<br />
+              Agradecemos sua colaboração.
+            </h2>
+)}
               {/* <form action="#" method="POST"> */}
                 <div className="shadow overflow-hidden sm:rounded-md">
                   <div className="px-4 py-5 bg-white sm:p-6">
@@ -238,7 +250,7 @@ export default function Home() {
                   <span className="block">
                     É de extrema importancia voce preencher com respostas que acredita de fato e espera de uma plataforma 
                     que atenda suas necessidades e expectativas. 
-                    <span className="block font-bold">Isso é muita valia para nosso serviço.</span>
+                    <span className="block font-bold">Isso é de muita importancia pra produzirmos o melhor produto.</span>
                   </span>
                   <span className="block"> <br /> </span>
                   {/* <span className="block">
@@ -356,9 +368,22 @@ export default function Home() {
                         <option value="Qualidade do serviço">Qualidade do serviço</option>
                         <option value="Outro">Outro</option>
                       </select>
-                      <label htmlFor="" className="block text-xs font-medium text-gray-700 mt-4">Cite suas considerações</label>
+                    </div>
+
+                    <div className="col-span-6 sm:col-span-4">
+                      <label htmlFor="service-provided" className="block text-sm font-medium text-gray-700">
+                        Quanto você estaria disposto a investir na plataforma para solicitar ou prestar serviços.
+                      </label>
+                      <select required name="service-provided" id="service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                        <option value="0-19.90">R$0 - R$29,90</option>
+                        <option value="20.00-39.90">R$20,00 - R$39,90</option>
+                        <option value="40.00-69.90">R$40,00 - R$69,90</option>
+                        <option value="Nada">Nada</option>
+                      </select>
+                      
+                      <label htmlFor="" className="block text-sm font-medium text-gray-700 mt-4">Cite suas considerações</label>
                       <textarea
-                        required
+                        // required
                         name="profession"
                         id="profession"
                         className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
