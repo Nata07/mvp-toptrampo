@@ -372,12 +372,13 @@ export default function Home() {
 
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="service-provided" className="block text-sm font-medium text-gray-700">
-                        Quanto você estaria disposto a investir na plataforma para solicitar ou prestar serviços.
+                        Quanto você estaria disposto a investir mensalmente na plataforma para solicitar ou prestar serviços com toda a segurança e qualidade possível.
                       </label>
                       <select required name="service-provided" id="service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
-                        <option value="0-19.90">R$0 - R$29,90</option>
+                        <option value="0-19.90">R$0 - R$19,90</option>
                         <option value="20.00-39.90">R$20,00 - R$39,90</option>
                         <option value="40.00-69.90">R$40,00 - R$69,90</option>
+                        <option value="Mais de 70.00">Mais de R$70,00</option>
                         <option value="Nada">Nada</option>
                       </select>
                       
