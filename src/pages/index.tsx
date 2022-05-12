@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <form name="questionary" method="POST" data-netlify="true" onSubmit={(e) => onSubmit(e)}>
-        <input type="hidden" name="questionary" value="questionary" />
+        <input type="hidden" name="form-name" value="questionary" />
         <div className="text-center mt-8">
           <h1 className="font-bold text-3xl text-green-600">Bem vindo a Top Trampo</h1>
           <span className="w-sm">Estamos contruindo uma plataforma e comunidade focada para prestadores de serviços. <br /> Esse é um questionário para você ajudar a construir o melhor produto.</span>
