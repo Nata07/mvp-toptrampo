@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [success, setSuccess] = useState(false);
   useEffect(() => {
-    console.log('chegou aqui')
     if ( window.location.search.includes('success=true') ) {
       setSuccess(true);
     }
@@ -291,10 +290,54 @@ export default function Home() {
                         <option value="Acho que não">Acho que não</option>
                       </select>
                     </div>
-                    
+
+                    <div className="col-span-6 sm:col-span-4">
+                      <label htmlFor="outsource-service-provided" className="block text-sm font-medium text-gray-700">
+                        Você costuma terceirizar serviços para seus problemas ou você mesmo soluciona?
+                      </label>
+                      <select required name="outsource-service-provided" id="outsource-service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                        <option value="Contrato">Eu contrato</option>
+                        <option value="Soluciono">Eu soluciono</option>                        
+                      </select>
+                    </div>
+
+                    <div className="col-span-6 sm:col-span-4">
+                      <label htmlFor="difficulted-service-provided" className="block text-sm font-medium text-gray-700">
+                        Você ja teve dificuldades de arrumar alguém para prestar serviços para você?
+                      </label>
+                      <select required name="difficulted-service-provided" id="difficulted-service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                        <option value="Sim, precisava muito e não conhecia ninguém">Sim, precisava muito e não conhecia ninguém</option>
+                        <option value="Sim, mas eu pesquisava na internet e achava">Sim, mas eu pesquisava na internet e achava</option>                        
+                        <option value="Sim, mas eu encontrava por meio de outros conhecidos">Sim, mas eu encontrava por meio de outros conhecidos</option>                        
+                        <option value="Não, sempre foi bem fácil pra mim">Não, sempre foi bem fácil pra mim.</option>                        
+                      </select>
+                    </div>
+
+                    <div className="col-span-6 sm:col-span-4">
+                      <label htmlFor="service-provided" className="block text-sm font-medium text-gray-700">
+                        O que mais te atrai para contratar um serviço?
+                      </label>
+                      <select required name="service-provided" id="service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                        <option value="Prazo">Prazo</option>
+                        <option value="Atendimento">Atendimento</option>
+                        <option value="Preço">Preço</option>
+                        <option value="Qualidade do serviço">Qualidade do serviço</option>
+                        <option value="Outro">Outro</option>
+                      </select>
+                      <label htmlFor="" className="block text-sm font-medium text-gray-700 mt-4">Cite caso tiver outros</label>
+                      <textarea
+                        // required
+                        name="service-provided-message"
+                        id="service-provided-message"
+                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      />
+                    </div>
+
+
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="used-app" className="block text-sm font-medium text-gray-700">
-                        Cite 2 aplicativos que você mais usa em seu dia a dia.
+                        {/* Cite 2 aplicativos que você mais usa em seu dia a dia. */}
+                        Conhece algum aplicativos para prestação de serviços? Cite-os caso conheça algum.
                       </label>
                       <textarea
                         required
@@ -305,20 +348,8 @@ export default function Home() {
                     </div>
 
                     <div className="col-span-6 sm:col-span-4">
-                      <label htmlFor="platform-winmoney" className="block text-sm font-medium text-gray-700">
-                        Existe alguma plataforma digital que te ajuda a ganhar dinheiro com seu trabalho? <br /> Se sim, cite qual é e os motivos do por que você usa.
-                      </label>
-                      <textarea
-                        required
-                        name="platform-winmoney"
-                        id="platform-winmoney"
-                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-
-                    <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="plataform-necessary" className="block text-sm font-medium text-gray-700">
-                        Você acha que hoje em dia uma plataforma que ajude pessoas a ganhar dinheiro é necessário?
+                        Você acha que hoje em dia uma plataforma que ajude pessoas a ganhar dinheiro prestando serviços é necessário?
                       </label>
                       <select
                         required
@@ -331,7 +362,7 @@ export default function Home() {
                       </select>
                     </div>
 
-                    <div className="col-span-6 sm:col-span-4">
+                    {/* <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="service-platform" className="block text-sm font-medium text-gray-700">
                         Você conhece e/ou ja usou alguma app/plataforma para contratar ou prestar serviços? <br /> Se sim cite-os e o que achou.
                       </label>
@@ -341,9 +372,9 @@ export default function Home() {
                         id="service-platform"
                         className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
-                    </div>
+                    </div> */}
 
-                    <div className="col-span-6 sm:col-span-4">
+                    {/* <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="use-platform-facility" className="block text-sm font-medium text-gray-700">
                         Você utilizaria uma plataforma que facilite a contratação de serviço e/ou para você como prestador 
                         de serviço te ofereça mais possibilidade de clientes e renda?
@@ -355,23 +386,29 @@ export default function Home() {
                         <option value="Hoje não tenho necessidade">Hoje não tenho necessidade</option>
                         <option value="Não utilizaria">Não utilizaria</option>
                       </select>
-                    </div>
+                    </div> */}
+
+                    
+
+                    
+
+                   
+
 
                     <div className="col-span-6 sm:col-span-4">
-                      <label htmlFor="service-provided" className="block text-sm font-medium text-gray-700">
-                        O que mais te atrai em para contratar um serviço e em um serviço prestado?
+                      <label htmlFor="platform-winmoney" className="block text-sm font-medium text-gray-700">
+                        Existe alguma plataforma digital que te ajuda a ganhar dinheiro com seu trabalho? <br /> Se sim, cite qual é e os motivos do por que você usa.
                       </label>
-                      <select required name="service-provided" id="service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
-                        <option value="Prazo">Prazo</option>
-                        <option value="Atendimento">Atendimento</option>
-                        <option value="Preço">Preço</option>
-                        <option value="Qualidade do serviço">Qualidade do serviço</option>
-                        <option value="Outro">Outro</option>
-                      </select>
+                      <textarea
+                        required
+                        name="platform-winmoney"
+                        id="platform-winmoney"
+                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      />
                     </div>
-
+                    
                     <div className="col-span-6 sm:col-span-4">
-                      <label htmlFor="service-provided" className="block text-sm font-medium text-gray-700">
+                      {/* <label htmlFor="service-provided" className="block text-sm font-medium text-gray-700">
                         Quanto você estaria disposto a investir mensalmente na plataforma para solicitar ou prestar serviços com toda a segurança e qualidade possível.
                       </label>
                       <select required name="service-provided" id="service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
@@ -380,9 +417,9 @@ export default function Home() {
                         <option value="40.00-69.90">R$40,00 - R$69,90</option>
                         <option value="Mais de 70.00">Mais de R$70,00</option>
                         <option value="Nada">Nada</option>
-                      </select>
+                      </select> */}
                       
-                      <label htmlFor="" className="block text-sm font-medium text-gray-700 mt-4">Cite suas considerações</label>
+                      <label htmlFor="" className="block text-sm font-medium text-gray-700 mt-4">Cite suas considerações, ou o que achar necessário.</label>
                       <textarea
                         // required
                         name="profession"
