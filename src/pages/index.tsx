@@ -38,10 +38,10 @@ export default function Home() {
             <div className="md:col-span-1 p-4">
               <div className="px-4 sm:px-0">
                 <h3 className="text-lg font-medium leading-6 text-gray-900">Informações pessoais</h3>
-                <p className="mt-1 text-sm text-gray-600">Preencha seus dados de forma correta. 
-                  <span className="block">Essas informações serão usadas na plataforma para fornece 
-                    a melhor experiência para você e para seus clientes. 
-                    <span className="block">Atente-se aos dados de email e telefone, é atraves desses dados que iremos entrar em contato contigo.</span>
+                <p className="mt-1 text-sm text-gray-600">Preencha de forma correta com seus dados. 
+                  <span className="block">As informações coletadas irão servir para que sua experiencia na nossa plataforma seja única, 
+                    tanto para você prestador de serviço quanto para você cliente.
+                    {/* <span className="block">Atente-se aos dados de email e telefone, é atraves desses dados que iremos entrar em contato contigo.</span> */}
                   </span>
                 </p>
               </div>
@@ -244,12 +244,13 @@ export default function Home() {
               <div className="px-4 sm:px-0">
                 <h3 className="text-lg font-medium leading-6 text-gray-900">Questionário</h3>
                 <p className="mt-1 text-sm text-gray-600">
-                  Esse questionário serve como um auxilio para nós ao criar a plataforma da <span className="font-bold text-green-600">Top Trampo</span>.
+                  Este questionário nos serve de base para que possamos desenvolver uma plataforma que atenda a todos os requisitos 
+                  dos usuários, por isso é de extrema importância que você nos diga exatamente o que você pensa, 
+                  para que possa haver um alinhamento do projeto com o que vocês precisam e gostariam! 
                   <span className="block"> <br /> </span>
                   <span className="block">
-                    É de extrema importancia voce preencher com respostas que acredita de fato e espera de uma plataforma 
-                    que atenda suas necessidades e expectativas. 
-                    <span className="block font-bold">Isso é de muita importancia pra produzirmos o melhor produto.</span>
+                    Agradecemos desde já sua colaboração para o aperfeiçoamento do nosso projeto!
+                    {/* <span className="block font-bold">Isso é de muita importancia pra produzirmos o melhor produto.</span> */}
                   </span>
                   <span className="block"> <br /> </span>
                   {/* <span className="block">
