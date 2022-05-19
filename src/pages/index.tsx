@@ -268,7 +268,7 @@ export default function Home() {
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="profession" className="block text-sm font-medium text-gray-700">
-                        Qual sua profissão?
+                        1. Qual sua profissão?
                       </label>
                       <textarea
                         required
@@ -279,7 +279,7 @@ export default function Home() {
                     </div>
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="hobby" className="block text-sm font-medium text-gray-700">
-                        Você tem algum hobby, que poderia trazer uma renda extra?
+                        2. Você tem algum hobby, que poderia trazer uma renda extra?
                       </label>
                       <select
                         required
@@ -294,7 +294,7 @@ export default function Home() {
 
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="outsource-service-provided" className="block text-sm font-medium text-gray-700">
-                        Você costuma terceirizar serviços para seus problemas ou você mesmo soluciona?
+                        3. Você costuma terceirizar serviços para seus problemas ou você mesmo soluciona?
                       </label>
                       <select required name="outsource-service-provided" id="outsource-service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
                         <option value="Contrato">Eu contrato</option>
@@ -304,7 +304,7 @@ export default function Home() {
 
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="difficulted-service-provided" className="block text-sm font-medium text-gray-700">
-                        Você ja teve dificuldades de arrumar alguém para prestar serviços para você?
+                        4. Você ja teve dificuldades de arrumar alguém para prestar serviços para você?
                       </label>
                       <select required name="difficulted-service-provided" id="difficulted-service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
                         <option value="Sim, precisava muito e não conhecia ninguém">Sim, precisava muito e não conhecia ninguém</option>
@@ -316,7 +316,7 @@ export default function Home() {
 
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="service-provided" className="block text-sm font-medium text-gray-700">
-                        O que mais te atrai para contratar um serviço?
+                        5. O que mais te atrai para contratar um serviço?
                       </label>
                       <select required name="service-provided" id="service-provided" className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
                         <option value="Prazo">Prazo</option>
@@ -338,7 +338,7 @@ export default function Home() {
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="used-app" className="block text-sm font-medium text-gray-700">
                         {/* Cite 2 aplicativos que você mais usa em seu dia a dia. */}
-                        Conhece algum aplicativos para prestação de serviços? Cite-os caso conheça algum.
+                        6. Conhece algum aplicativos para prestação de serviços? Cite-os caso conheça algum.
                       </label>
                       <textarea
                         required
@@ -350,7 +350,7 @@ export default function Home() {
 
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="plataform-necessary" className="block text-sm font-medium text-gray-700">
-                        Você acha que hoje em dia uma plataforma que ajude pessoas a ganhar dinheiro prestando serviços é necessário?
+                        7. Você acha que hoje em dia uma plataforma que ajude pessoas a ganhar dinheiro prestando serviços é necessário?
                       </label>
                       <select
                         required
@@ -388,17 +388,10 @@ export default function Home() {
                         <option value="Não utilizaria">Não utilizaria</option>
                       </select>
                     </div> */}
-
                     
-
-                    
-
-                   
-
-
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="platform-winmoney" className="block text-sm font-medium text-gray-700">
-                        Existe alguma plataforma digital que te ajuda a ganhar dinheiro com seu trabalho? <br /> Se sim, cite qual é e os motivos do por que você usa.
+                        8. Existe alguma plataforma digital que te ajuda a ganhar dinheiro com seu trabalho? <br /> Se sim, cite qual é e os motivos do por que você usa.
                       </label>
                       <textarea
                         required
@@ -420,7 +413,7 @@ export default function Home() {
                         <option value="Nada">Nada</option>
                       </select> */}
                       
-                      <label htmlFor="" className="block text-sm font-medium text-gray-700 mt-4">Cite suas considerações, ou o que achar necessário.</label>
+                      <label htmlFor="" className="block text-sm font-medium text-gray-700 mt-4">9. Cite suas considerações, ou o que achar necessário.</label>
                       <textarea
                         // required
                         name="profession"
