@@ -413,11 +413,11 @@ export default function Home() {
                         <option value="Nada">Nada</option>
                       </select> */}
                       
-                      <label htmlFor="" className="block text-sm font-medium text-gray-700 mt-4">9. Cite suas considerações, ou o que achar necessário.</label>
+                      <label htmlFor="considerations" className="block text-sm font-medium text-gray-700 mt-4">9. Cite suas considerações, ou o que achar necessário.</label>
                       <textarea
                         // required
-                        name="profession"
-                        id="profession"
+                        name="considerations"
+                        id="considerations"
                         className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
