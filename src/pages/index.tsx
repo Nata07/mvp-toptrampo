@@ -413,7 +413,7 @@ export default function Home() {
                         <option value="Nada">Nada</option>
                       </select> */}
                       
-                      <label htmlFor="considerations" className="block text-sm font-medium text-gray-700 mt-4">9. Cite suas considerações, ou o que achar necessário.</label>
+                      <label htmlFor="considerations" className="block text-sm font-medium text-gray-700 mt-4">9. Cite suas considerações, ideias, o que gostaria de ver na plataforma ou o que achar necessário.</label>
                       <textarea
                         // required
                         name="considerations"
